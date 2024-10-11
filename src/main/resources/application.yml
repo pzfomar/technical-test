@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: technical-test
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:prices
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+springdoc:
+  show-actuator: true
+  swagger-ui.path: /swagger-ui.html
